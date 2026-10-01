@@ -22,7 +22,7 @@
                             <x-input id="nimi" class="block mt-l w-full" type="text" name="nimi" value="" require autofocus />
 
                             <x-label for="kuvaus" value="{{ _('Kuvaus') }}" />
-                            <textarea name="kuvaus" id="kuvaus">{{ old('kuvaus') }}</textarea>
+                            <livewire:character-counter />
                             
                             <x-label for="status" value="{{ _('Status') }}" />
                             <select name="status" id="status">
