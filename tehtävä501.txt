@@ -1,0 +1,22 @@
+resources/views/welcome.blade.php
+aloitussivu, kirjautuminen, rekisteröityminen
+
+resources/views/dashboard.blade.php
+ensimmäinen sivu rekisteröitymisen jälkeen <x-welcome />
+
+
+
+resources/views/auth/login.blade.php
+kirjautumissivu
+
+resources/views/auth/register.blade.php
+rekisteröitymissivu
+
+resources/views/layouts/app.blade.php
+fonts, scripts, styles, page heading, page content
+
+resources/views/layouts/guest.blade.php
+fonts, scripts, styles
+
+resources/views/components/welcome.blade.php
+sisältö ensimmäiselle sivulle sisäänkirjautumisen jälkeen

@@ -40,9 +40,17 @@
                             </td>
                             <td>
                                 {{ $todo->nimi }}
+                                </td>
+                                <td>
                                 {{ $todo->kuvaus }}
+                                </td>
+                                <td>
                                 {{ $todo->status }}
+                                </td>
+                                <td>
                                 {{ $todo->määräpäivä }}
+                                </td>
+                                <td>
                                 {{ $todo->kiireellisyys }}
                             </td>
                         </tr>
