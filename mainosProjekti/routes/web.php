@@ -1,12 +1,15 @@
 <?php
 
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PriceController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Julkiset sivut
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/palaute', [FeedbackController::class, 'create'])->name('feedback.create');
 
+// Vain kirjautuneille
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -16,10 +19,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/price', function () {
-        return view('price.index');
-    })->name('price');
-
     Route::resource('price', PriceController::class);
-
+    Route::resource('feedback', FeedbackController::class)->except(['create', 'store']);
 });

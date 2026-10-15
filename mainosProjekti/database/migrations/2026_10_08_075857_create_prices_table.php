@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('price');
             $table->text('kuvaus');
-            $table->string('image')->nullable();
             $table->timestamps();
-            
         });
     }
 
